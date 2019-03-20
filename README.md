@@ -14,9 +14,6 @@ This project builds on a CFML API framework built by [jcberquist](https://github
   - [Table of Contents](#table-of-contents)
   - [Quick Start](#quick-start)
   - [Reference Manual](#reference-manual)
-      - [`locate( required string input, struct params = {} )`](#locate-required-string-input-struct-params)
-      - [`scantext( required string input, struct params = {} )`](#scantext-required-string-input-struct-params)
-      - [`geocode( struct params = {} )`](#geocode-struct-params)
 - [Questions](#questions)
 - [Contributing](#contributing)
 
@@ -36,17 +33,17 @@ Note that you can also provide the `authCode` via the `GEOCODERCA_AUTH_CODE` env
 ## Reference Manual
 While the API itself can return output as JSON, JSONP, or XML, this wrapper is current hardcoded to use JSON. The available parameters and their descriptions are outlined in the [API documentation](https://geocoder.ca/?premium_api=1).
 
-#### `locate( required string input, struct params = {} )`
+#### `locate( required string input, struct params = {} )` <!-- omit in toc -->
 Passes the `input` in as the API's `locate` param. As the docs explain, this "may be a street address, an intersection, a zip code, an ip address or any other combination of location entities. For example 330 metcalfe ottawa or metcalfe & wellington ottawa"
 
 Params may be passed in as a struct of options, or as named arguments, i.e., you may can format calls as `geo.locate( input = 'M5H 3W4', showcountry = 1 )`
 
-#### `scantext( required string input, struct params = {} )`
+#### `scantext( required string input, struct params = {} )` <!-- omit in toc -->
 Passes the `input` in as the API's `scantext` param. As the docs explain, this is "free form text containing locations. For example: This and That and the Other street in Porters Lake Nova Scotia". Honestly, I've had a hard time figuring out the point of the functionality, and it doesn't seem to behave consistently. But here it is.
 
 Params may be passed in as a struct of options, or as named arguments, i.e., you may can format calls as `geo.scantext( input = 'This and That and the Other street in Porters Lake Nova Scotia', geoit = 'csv' )`
 
-#### `geocode( struct params = {} )`
+#### `geocode( struct params = {} )` <!-- omit in toc -->
 A general wrapper for manually using all api parameters. You can manually pass the parameters from the API documentation into this method to use the API.
 
 # Questions
