@@ -8,12 +8,8 @@ A CFML wrapper for the [Geocoder.ca API](https://geocoder.ca/?premium_api=1), us
 This project builds on a CFML API framework built by [jcberquist](https://github.com/jcberquist). Consequently, it is also licensed under the terms of the MIT license.
 
 ## Table of Contents
-
-- [Geocoder.ca CFML](#geocoderca-cfml)
-    - [Acknowledgements](#acknowledgements)
-  - [Table of Contents](#table-of-contents)
-  - [Quick Start](#quick-start)
-  - [Reference Manual](#reference-manual)
+- [Quick Start](#quick-start)
+- [Reference Manual](#reference-manual)
 - [Questions](#questions)
 - [Contributing](#contributing)
 
