@@ -10,7 +10,8 @@ component displayname="Geocoder.ca CFML"  {
   public any function init(
     string authCode = '',
     string baseUrl = "https://geocoder.ca",
-    boolean includeRaw = false ) {
+    boolean includeRaw = false,
+    numeric httpTimeout = 50 ) {
 
     structAppend( variables, arguments );
 
@@ -168,7 +169,7 @@ component displayname="Geocoder.ca CFML"  {
 
     var requestHeaders = parseHeaders( headers );
 
-    cfhttp( url = fullPath, method = httpMethod,  result = 'result' ) {
+    cfhttp( url = fullPath, method = httpMethod,  result = 'result', timeout = variables.httpTimeout ) {
 
       if ( isJsonPayload( headers ) ) {
 
