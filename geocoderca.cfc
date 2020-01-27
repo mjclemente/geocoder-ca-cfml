@@ -5,7 +5,7 @@
 */
 component displayname="Geocoder.ca CFML"  {
 
-  variables._geocodercacfml_version = '0.0.0';
+  variables._geocodercacfml_version = '1.0.0';
 
   public any function init(
     string authCode = '',
